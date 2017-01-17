@@ -11,7 +11,6 @@
     0% { opacity: 1; }
     100% { opacity: 0.5; }
 
-
 }
 
 h1 {
@@ -38,24 +37,50 @@ br{
 a:link {
     color: red;
     font-size: 20px;
+    border: 2px solid dimgray;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
 }
 
 /* visited link */
 a:visited {
     color: indianred;
+    border: 2px solid dimgray;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
 }
 
 /* mouse over link */
 a:hover {
     color: black;
     text-decoration: underline;
+    border: 2px solid dimgray;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+
 }
 
 /* selected link */
 a:active {
     color: lightgray;
     text-decoration: underline;
+    border: 2px solid dimgray;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
 }
+footer {
+    text-align: center;
+    position: fixed;
+    width:100%;
+    bottom:0;
+    background:lavender;
+    height:100px;
+}
+
 
 
 
