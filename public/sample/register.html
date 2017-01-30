@@ -2,29 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>Login</h1>
+    <div class="container">
 
-        <label for="username"> Username</label>
+        <h1>Register</h1>
+
+        <label for="username" class="">Username</label>
         <input id="username" type="text"
                class="form-control"
                placeholder="username"/>
 
-
-        <label for="password"> Password </label>
+        <label for="password" class="">Password</label>
         <input id="password" type="password"
                class="form-control"
                placeholder="password"/>
 
+        <label for="password1" class="">Re-enter Password</label>
+        <input id="password1" type="password"
+               class="form-control"
+               placeholder="very password"/>
+
+
         <a class="btn btn-primary btn-block"
-           href="profile.html">Login</a>
-        <a class="btn btn-success btn-block"
-           href="register.html">Register</a>
+           href="profile.html">Register</a>
+        <a class="btn btn-danger  btn-block"
+           href="login.html">Cancel</a>
     </div>
 </body>
 </html>
