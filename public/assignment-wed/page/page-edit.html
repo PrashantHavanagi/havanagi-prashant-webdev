@@ -4,7 +4,7 @@
     <link href="../../Boot/css/bootstrap.css" rel="stylesheet"/>
     <link href="../css/styles.css" rel="stylesheet"/>
     <meta charset="UTF-8">
-    <title>Website List</title>
+    <title>Page edit</title>
     <style>
         .navbar-default {
             background-color: #3b5998;
@@ -14,7 +14,6 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-
     <div class="row container-fluid">
         <div class="col-sm-4 hidden-xs">
             <div class="navbar-text pull-left">
@@ -24,12 +23,12 @@
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand">
-                    websites
+                   Web
                 </a>
             </div>
             <div class="navbar-text pull-right">
                 <a>
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="glyphicon glyphicon-plus"></span>
                 </a>
             </div>
         </div>
@@ -41,12 +40,12 @@
             </div>
             <div class="navbar-text pull-right">
                 <a>
-                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="glyphicon glyphicon-ok"></span>
                 </a>
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand no-left-padding no-left-margin">
-                    New websites
+                    Edit Page
                 </a>
             </div>
         </div>
@@ -54,8 +53,7 @@
 </nav>
 
 <div class="row container-fluid">
-    <div class="col-sm-4 hidden-xs">
-
+    <div class="col-sm-4 hidden-xs wbdv-left-pane">
         <ul class="list-group">
 
 
@@ -65,7 +63,7 @@
                         Facebook
                     </div>
                     <div class="col-xs-1 pull-right">
-                        <a href="website-edit.html">
+                        <a href="page-edit.html">
                             <span class="glyphicon glyphicon-cog "></span>
                         </a>
                     </div>
@@ -78,7 +76,7 @@
                         Your Blogs
                     </div>
                     <div class="col-xs-1 pull-right">
-                        <a href="website-edit.html">
+                        <a href="page-edit.html">
                             <span class="glyphicon glyphicon-cog "></span>
                         </a>
                     </div>
@@ -91,7 +89,7 @@
                         create new
                     </div>
                     <div class="col-xs-1 pull-right">
-                        <a href="website-edit.html">
+                        <a href="page-edit.html">
                             <span class="glyphicon glyphicon-cog "></span>
                         </a>
                     </div>
@@ -104,7 +102,7 @@
                         Blogs again
                     </div>
                     <div class="col-xs-1 pull-right">
-                        <a href="website-edit.html">
+                        <a href="page-edit.html">
                             <span class="glyphicon glyphicon-cog "></span>
                         </a>
                     </div>
@@ -117,7 +115,7 @@
                         Blogs-cricket
                     </div>
                     <div class="col-xs-1 pull-right">
-                        <a href="website-edit.html">
+                        <a href="page-edit.html">
                             <span class="glyphicon glyphicon-cog "></span>
                         </a>
                     </div>
@@ -125,20 +123,26 @@
             </li>
         </ul>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8 wbdv-right-pane">
         <label for="website-name">Website Name</label>
         <input placeholder="Website Name"
+               value="Facebook"
                class="form-control"
                id="website-name"/>
 
         <label for="website-description">Website Description</label>
         <textarea placeholder="Website Description"
                   class="form-control"
-                  id="website-description"></textarea>
+                  id="website-description">This is the description of facebook website</textarea>
 
         <a href="website-list.html" class="btn btn-primary btn-block">
-            Create
+            Update
         </a>
+        <a href="website-list.html" class="btn btn-danger btn-block">
+            Delete
+        </a>
+
+
     </div>
 </div>
 
@@ -153,6 +157,5 @@
         </div>
     </div>
 </nav>
-
 </body>
 </html>

@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../../css/bootstrap.css" rel="stylesheet"/>
+    <link href="../../Boot/css/bootstrap.css" rel="stylesheet"/>
     <link href="../css/styles.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <title>Widget List</title>
+    <style>
+        .navbar-default {
+            background-color: #3b5998;
+        }
+    </style>
 </head>
+
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-text pull-left">
-            <a href="../user/profile.html">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-        </div>
-        <div class="navbar-text pull-right">
-            <a href="website-new.html">
-                <span class="glyphicon glyphicon-plus"></span>
-            </a>
-        </div>
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Widgets</a>
+    <div class="row container-fluid">
+        <div class="col-xs-12">
+            <div class="navbar-text pull-right">
+                <a href="#" class="navbar-link">
+                  <span class="glyphicon glyphicon glyphicon-plus">
+                  </span>
+                </a>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Widgets
+                </a>
+            </div>
         </div>
     </div>
 </nav>
@@ -71,11 +77,14 @@
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Footer</a>
+        <div class="row navbar-text pull-right ">
+            <div class="col-xs-3 pull-right">
+                <a href="#">
+                    <span class="glyphicon glyphicon glyphicon-user"></span>
+                </a>
+            </div>
         </div>
     </div>
 </nav>
-
 </body>
 </html>
