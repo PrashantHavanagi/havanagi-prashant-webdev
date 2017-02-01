@@ -6,20 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Website List</title>
-    <style>
-        .navbar-default {
-            background-color: #3b5998;
-        }
-        .navbar-default .navbar-brand {
-            color: white;
-        }
-        .navbar-default .navbar-link {
-            color: white;
-        }
-        .navbar-text a {
-            color: white;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -33,10 +20,12 @@
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand">
+                <a class="navbar-brand" href="website-list.html">
                     websites
                 </a>
             </div>
+
+
             <div class="navbar-text pull-right">
                 <a href="website-new.html">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -44,9 +33,9 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="navbar-text pull-left">
+            <div class="visible-xs navbar-text pull-left">
                 <a href="website-list.html">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="glyphicon glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
@@ -55,7 +44,7 @@
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand no-left-padding no-left-margin">
+                <a class="navbar-brand no-left-padding no-left-margin" href="website-new.html">
                     New websites
                 </a>
             </div>
@@ -63,7 +52,8 @@
     </div>
 </nav>
 
-<div class="row container-fluid">
+<div class="container-fluid">
+    <div class="row">
     <div class="col-sm-4 hidden-xs">
 
         <ul class="list-group">
@@ -153,18 +143,18 @@
 
         <label for="website-description">Website Description</label>
         <textarea placeholder="Website Description"
-                  class="form-control"
+                  class="form-control" rows="3"
                   id="website-description"></textarea>
 
     </div>
 </div>
-
+</div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
                 <a href="../user/profile.html">
-                    <span class="glyphicon glyphicon glyphicon-user" style="padding-right: 100px"></span>
+                    <span class="glyphicon glyphicon glyphicon-user" id="span1"></span>
                 </a>
             </div>
         </div>

@@ -6,20 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Page New</title>
-    <style>
-        .navbar-default {
-            background-color: #3b5998;
-        }
-        .navbar-default .navbar-brand {
-            color: white;
-        }
-        .navbar-default .navbar-link {
-            color: white;
-        }
-        .navbar-text a {
-            color: white;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -33,7 +20,7 @@
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand">
+                <a class="navbar-brand" href="#">
                     Pages
                 </a>
             </div>
@@ -44,9 +31,9 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="navbar-text pull-left">
-                <a href="../user/profile.html">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+            <div class="visible-xs navbar-text pull-left">
+                <a href="page-list.html">
+                    <span class="glyphicon glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
@@ -55,7 +42,7 @@
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand no-left-padding no-left-margin">
+                <a class="navbar-brand no-left-padding no-left-margin" href="page-new.html">
                     New Pages
                 </a>
             </div>
@@ -153,7 +140,7 @@
 
         <label for="website-description"> Title</label>
         <textarea placeholder="Website Description"
-                  class="form-control"
+                  class="form-control" rows="3"
                   id="website-description"></textarea>
 
     </div>
@@ -164,7 +151,7 @@
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
                 <a href="../user/profile.html">
-                    <span class="glyphicon glyphicon glyphicon-user" style="padding-right: 100px"></span>
+                    <span class="glyphicon glyphicon glyphicon-user" id="span1"></span>
                 </a>
             </div>
         </div>

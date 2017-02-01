@@ -6,25 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Page edit</title>
-    <style>
-        .navbar-default {
-            background-color: #3b5998;
-        }
-        .navbar-default .navbar-brand {
-            color: white;
-        }
-        .navbar-default .navbar-link {
-            color: white;
-        }
-        .navbar-text a {
-            color: white;
-        }
-    </style>
+
 </head>
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="row container-fluid">
+    <div class="wrapper container-fluid">
+        <div class="row">
         <div class="col-sm-4 hidden-xs">
             <div class="navbar-text pull-left">
                 <a href="../website/website-list.html">
@@ -43,9 +31,9 @@
             </div>
         </div>
         <div class="col-sm-8">
-            <div class="navbar-text pull-left">
+            <div class="visible-xs navbar-text pull-left">
                 <a href="page-list.html">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="glyphicon glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
@@ -60,9 +48,11 @@
             </div>
         </div>
     </div>
+    </div>
 </nav>
 
-<div class="row container-fluid">
+<div class="wrapper container-fluid">
+    <div class="row">
     <div class="col-sm-4 hidden-xs wbdv-left-pane">
         <ul class="list-group">
 
@@ -162,13 +152,14 @@
 
     </div>
 </div>
+</div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
+    <div class=" wrapper container-fluid">
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
                 <a href="../user/profile.html">
-                    <span class="glyphicon glyphicon glyphicon-user" style="padding-right: 100px"></span>
+                    <span class="glyphicon glyphicon glyphicon-user" id="span1"></span>
                 </a>
             </div>
         </div>
