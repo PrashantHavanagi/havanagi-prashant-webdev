@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e192ce-b790-44f1-b0e7-e993af0fdf64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment-wed/widget/widget-image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment-wed/widget/widget-youtube.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-edit.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-edit.html" afterPath="$PROJECT_DIR$/public/assignment-wed/page/page-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-list.html" afterPath="$PROJECT_DIR$/public/assignment-wed/page/page-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-new.html" afterPath="$PROJECT_DIR$/public/assignment-wed/page/page-new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/user/profile.html" afterPath="$PROJECT_DIR$/public/assignment-wed/user/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-edit.html" afterPath="$PROJECT_DIR$/public/assignment-wed/website/website-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-list.html" afterPath="$PROJECT_DIR$/public/assignment-wed/website/website-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-new.html" afterPath="$PROJECT_DIR$/public/assignment-wed/website/website-new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-choser.html" afterPath="$PROJECT_DIR$/public/assignment-wed/widget/widget-choser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html" afterPath="$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-list.html" afterPath="$PROJECT_DIR$/public/assignment-wed/widget/widget-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,8 +83,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="240">
+              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -141,7 +128,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/public/CSS/fonts.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/project/index.html" />
         <option value="$PROJECT_DIR$/public/assignment/index.html" />
         <option value="$PROJECT_DIR$/test/app.js" />
@@ -168,6 +154,7 @@
         <option value="$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html" />
         <option value="$PROJECT_DIR$/public/assignment-wed/widget/widget-image.html" />
         <option value="$PROJECT_DIR$/public/assignment-wed/widget/widget-youtube.html" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -248,6 +235,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="havanagi-prashant-webdev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="havanagi-prashant-webdev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assignment-wed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -275,10 +284,7 @@
       <recent name="$PROJECT_DIR$/public/project" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.profile.html (1)">
-    <configuration default="false" name="widget-heading.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment-wed/widget/widget-heading.html">
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="widget-image.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment-wed/widget/widget-image.html">
       <method />
     </configuration>
@@ -289,6 +295,9 @@
       <method />
     </configuration>
     <configuration default="false" name="profile.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment/profile.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/index.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -405,19 +414,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.app" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.widget-heading.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.widget-image.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.widget-youtube.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.profile.html (1)" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.widget-image.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.widget-youtube.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.profile.html (1)" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.profile.html (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.widget-image.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.widget-youtube.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.widget-heading.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.profile.html (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.login.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.widget-image.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.widget-youtube.html" />
       </list>
     </recent_temporary>
   </component>
@@ -440,12 +449,12 @@
       <workItem from="1485789760333" duration="136000" />
       <workItem from="1485799862503" duration="3896000" />
       <workItem from="1485847233334" duration="5191000" />
-      <workItem from="1485891259363" duration="12082000" />
+      <workItem from="1485891259363" duration="12429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41523000" />
+    <option name="totallyTimeSpent" value="41870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1228" height="807" extended-state="0" />
@@ -859,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="240">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding />
         </state>
       </provider>
