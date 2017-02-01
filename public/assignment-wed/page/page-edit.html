@@ -9,6 +9,15 @@
         .navbar-default {
             background-color: #3b5998;
         }
+        .navbar-default .navbar-brand {
+            color: white;
+        }
+        .navbar-default .navbar-link {
+            color: white;
+        }
+        .navbar-text a {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -17,29 +26,29 @@
     <div class="row container-fluid">
         <div class="col-sm-4 hidden-xs">
             <div class="navbar-text pull-left">
-                <a>
+                <a href="../website/website-list.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand">
-                   Web
+                   Pages
                 </a>
             </div>
             <div class="navbar-text pull-right">
-                <a>
+                <a href="page-new.html">
                     <span class="glyphicon glyphicon-plus"></span>
                 </a>
             </div>
         </div>
         <div class="col-sm-8">
             <div class="navbar-text pull-left">
-                <a>
+                <a href="page-list.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
-                <a>
+                <a href="page-list.html">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
             </div>
@@ -60,11 +69,13 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-xs-11 col-sm-6">
+                        <a href="../widget/widget-list.html">
                         Facebook
+                        </a>
                     </div>
                     <div class="col-xs-1 pull-right">
                         <a href="page-edit.html">
-                            <span class="glyphicon glyphicon-cog "></span>
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
                     </div>
                 </div>
@@ -73,11 +84,13 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-xs-11 col-sm-6">
+                        <a href="../widget/widget-list.html">
                         Your Blogs
+                        </a>
                     </div>
                     <div class="col-xs-1 pull-right">
                         <a href="page-edit.html">
-                            <span class="glyphicon glyphicon-cog "></span>
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
                     </div>
                 </div>
@@ -86,11 +99,13 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-xs-11 col-sm-6">
+                        <a href="../widget/widget-list.html">
                         create new
+                        </a>
                     </div>
                     <div class="col-xs-1 pull-right">
                         <a href="page-edit.html">
-                            <span class="glyphicon glyphicon-cog "></span>
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
                     </div>
                 </div>
@@ -99,11 +114,13 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-xs-11 col-sm-6">
+                        <a href="../widget/widget-list.html">
                         Blogs again
+                        </a>
                     </div>
                     <div class="col-xs-1 pull-right">
                         <a href="page-edit.html">
-                            <span class="glyphicon glyphicon-cog "></span>
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
                     </div>
                 </div>
@@ -112,11 +129,13 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-xs-11 col-sm-6">
+                        <a href="../widget/widget-list.html">
                         Blogs-cricket
+                        </a>
                     </div>
                     <div class="col-xs-1 pull-right">
                         <a href="page-edit.html">
-                            <span class="glyphicon glyphicon-cog "></span>
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
                     </div>
                 </div>
@@ -124,21 +143,18 @@
         </ul>
     </div>
     <div class="col-sm-8 wbdv-right-pane">
-        <label for="website-name">Website Name</label>
-        <input placeholder="Website Name"
+        <label for="page-name"> Name</label>
+        <input placeholder="Blog name"
                value="Facebook"
                class="form-control"
-               id="website-name"/>
+               id="page-name"/>
 
-        <label for="website-description">Website Description</label>
-        <textarea placeholder="Website Description"
+        <label for="title">Title</label>
+        <input placeholder="name it"
                   class="form-control"
-                  id="website-description">This is the description of facebook website</textarea>
+                  id="title"></input>
 
-        <a href="website-list.html" class="btn btn-primary btn-block">
-            Update
-        </a>
-        <a href="website-list.html" class="btn btn-danger btn-block">
+        <a href="page-list.html" class="btn btn-danger btn-block">
             Delete
         </a>
 
@@ -150,12 +166,13 @@
     <div class="container-fluid">
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
-                <a href="#">
-                    <span class="glyphicon glyphicon glyphicon-user"></span>
+                <a href="../user/profile.html">
+                    <span class="glyphicon glyphicon glyphicon-user" style="padding-right: 100px"></span>
                 </a>
             </div>
         </div>
     </div>
 </nav>
+
 </body>
 </html>
