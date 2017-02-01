@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
+    <link href="Boot/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assignment2/css/styles.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
-    <title>Web Dev Course Home Page</title>
+    <title>index</title>
+    <style>
+        .navbar-default {
+            background-color: #3b5998;
+        }
+        .navbar-default .navbar-brand {
+            color: white;
+        }
+
+        .navbar-text a {
+            color: white;
+        }
+    </style>
 </head>
-<body background="images/f6eNS7.jpg">
-<div class="container">
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+    </div>
+</nav>
+
+<div class="container-fluid">
+
     <h1>Web Dev Course Home Page</h1>
 
 
     <h2>Required links: </h2>
-    <ul>
-        <li>
-            <a href="project/index.html">Project</a>
-        </li>
-        <br>
-        <li>
-            <a href="assignment2/user/login.html">Assignment</a>
 
-        </li>
-        <br>
-        <li>
-            <a href="test/index.html">Test MongoDB</a>
+    <ul class="list-group">
 
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-xs-11 col-sm-6">
+                    <a href="project/index.html">Project</a>
+                </div>
+            </div>
         </li>
-        <br>
-        <li>
-            <a href="https://github.com/PrashantHavanagi/havanagi-prashant-webdev">Your public repository at GitHub.com</a>
 
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-xs-11 col-sm-6">
+                    <a href="assignment2/user/login.html">Assignment</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-xs-11 col-sm-6">
+                    <a href="test/index.html">Test MongoDB</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-xs-11 col-sm-6">
+                    <a href="https://github.com/PrashantHavanagi/havanagi-prashant-webdev">Your public repository at GitHub.com</a>
+                </div>
+            </div>
         </li>
     </ul>
 </div>
 
-<footer>
-    <p>Posted by: Prashant Havanagi</p>
-    <p>Contact information: <a href="mailto:havanagi.p@husky.neu.edu" >
-        Click To mail the creator !!</a></p>
-</footer>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+
+</nav>
+
 </body>
 </html>
