@@ -2,6 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e192ce-b790-44f1-b0e7-e993af0fdf64" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/css/styles.css" afterPath="$PROJECT_DIR$/public/assignment2/css/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-edit.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-edit.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-list.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-list.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/page/page-new.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-new.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/user/index.html" afterPath="$PROJECT_DIR$/public/assignment2/user/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/user/login.html" afterPath="$PROJECT_DIR$/public/assignment2/user/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/user/profile.html" afterPath="$PROJECT_DIR$/public/assignment2/user/profile.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/user/register.html" afterPath="$PROJECT_DIR$/public/assignment2/user/register.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/user/style.css" afterPath="$PROJECT_DIR$/public/assignment2/user/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-edit.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-edit.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-list.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-list.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/website/website-new.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-new.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-choser.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-choser.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-heading.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-image.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-image.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-list.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-list.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment-wed/widget/widget-youtube.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-youtube.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,7 +39,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/profile.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/user/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
               <caret line="70" column="46" lean-forward="false" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
@@ -33,7 +51,7 @@
         </entry>
       </file>
       <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-list.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="426">
               <caret line="119" column="45" lean-forward="false" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
@@ -45,7 +63,7 @@
         </entry>
       </file>
       <file leaf-file-name="widget-choser.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-choser.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-choser.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
@@ -57,7 +75,7 @@
         </entry>
       </file>
       <file leaf-file-name="widget-heading.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-heading.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
               <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
@@ -69,7 +87,7 @@
         </entry>
       </file>
       <file leaf-file-name="widget-image.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-image.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-image.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1020">
               <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
@@ -83,15 +101,15 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="widget-youtube.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-youtube.html">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-youtube.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
@@ -231,7 +249,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assignment-wed" />
+              <option name="myItemId" value="assignment2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,7 +267,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assignment-wed" />
+              <option name="myItemId" value="assignment2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -449,12 +467,12 @@
       <workItem from="1485789760333" duration="136000" />
       <workItem from="1485799862503" duration="3896000" />
       <workItem from="1485847233334" duration="5191000" />
-      <workItem from="1485891259363" duration="12429000" />
+      <workItem from="1485891259363" duration="12575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41870000" />
+    <option name="totallyTimeSpent" value="42016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1228" height="807" extended-state="0" />
@@ -671,21 +689,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/index.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/user/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/register.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/user/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/style.css">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/user/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -700,7 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
@@ -716,7 +734,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/login.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
@@ -724,7 +742,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/website/website-new.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="40" column="66" lean-forward="true" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
@@ -734,7 +752,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/page/page-edit.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
@@ -744,7 +762,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/website/website-list.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
@@ -754,7 +772,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/page/page-new.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="60" column="14" lean-forward="true" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
@@ -764,7 +782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/website/website-edit.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-87">
           <caret line="133" column="28" lean-forward="false" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
@@ -772,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/page/page-list.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
@@ -782,7 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/user/profile.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/user/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="70" column="46" lean-forward="false" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
@@ -792,7 +810,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-list.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="119" column="45" lean-forward="false" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
@@ -802,7 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-choser.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-choser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
@@ -812,7 +830,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-heading.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-heading.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
@@ -822,7 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-youtube.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-youtube.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="52" lean-forward="true" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
@@ -832,7 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment-wed/widget/widget-image.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-image.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
@@ -868,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
