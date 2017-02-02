@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e192ce-b790-44f1-b0e7-e993af0fdf64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/css/styles.css" afterPath="$PROJECT_DIR$/public/assignment2/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/page/page-edit.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/page/page-list.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/page/page-new.html" afterPath="$PROJECT_DIR$/public/assignment2/page/page-new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/website/website-edit.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/website/website-list.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/website/website-new.html" afterPath="$PROJECT_DIR$/public/assignment2/website/website-new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment2/widget/widget-list.html" afterPath="$PROJECT_DIR$/public/assignment2/widget/widget-list.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="website-edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="1368">
+              <caret line="136" column="34" lean-forward="true" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -37,8 +40,8 @@
       <file leaf-file-name="website-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+            <state relative-caret-position="468">
+              <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -47,8 +50,8 @@
       <file leaf-file-name="website-new.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="120" column="34" lean-forward="true" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -57,8 +60,8 @@
       <file leaf-file-name="page-list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -67,38 +70,38 @@
       <file leaf-file-name="page-edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-new.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-new.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="2010">
+              <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment2/user/login.html">
+      <file leaf-file-name="widget-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="243">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment2/user/profile.html">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assignment2/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="63" column="87" lean-forward="false" selection-start-line="63" selection-start-column="87" selection-end-line="63" selection-end-column="87" />
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -183,15 +186,15 @@
         <option value="$PROJECT_DIR$/public/assignment2/widget/widget-choser.html" />
         <option value="$PROJECT_DIR$/public/assignment2/widget/widget-heading.html" />
         <option value="$PROJECT_DIR$/public/assignment2/widget/widget-image.html" />
-        <option value="$PROJECT_DIR$/public/assignment2/widget/widget-list.html" />
         <option value="$PROJECT_DIR$/public/assignment2/widget/widget-youtube.html" />
-        <option value="$PROJECT_DIR$/public/assignment2/css/styles.css" />
-        <option value="$PROJECT_DIR$/public/assignment2/page/page-list.html" />
-        <option value="$PROJECT_DIR$/public/assignment2/website/website-list.html" />
         <option value="$PROJECT_DIR$/public/assignment2/website/website-edit.html" />
+        <option value="$PROJECT_DIR$/public/assignment2/website/website-list.html" />
         <option value="$PROJECT_DIR$/public/assignment2/website/website-new.html" />
         <option value="$PROJECT_DIR$/public/assignment2/page/page-edit.html" />
+        <option value="$PROJECT_DIR$/public/assignment2/page/page-list.html" />
         <option value="$PROJECT_DIR$/public/assignment2/page/page-new.html" />
+        <option value="$PROJECT_DIR$/public/assignment2/widget/widget-list.html" />
+        <option value="$PROJECT_DIR$/public/assignment2/css/styles.css" />
       </list>
     </option>
   </component>
@@ -207,7 +210,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="345" />
+    <option name="x" value="424" />
     <option name="y" value="23" />
     <option name="width" value="1031" />
     <option name="height" value="807" />
@@ -391,11 +394,8 @@
       <recent name="$PROJECT_DIR$/public/project" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.page-new.html">
+  <component name="RunManager" selected="JavaScript Debug.widget-list.html">
     <configuration default="false" name="page-new.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment2/page/page-new.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="website-list.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment2/website/website-list.html">
       <method />
     </configuration>
     <configuration default="false" name="page-edit.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment2/page/page-edit.html">
@@ -405,6 +405,9 @@
       <method />
     </configuration>
     <configuration default="false" name="website-new.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment2/website/website-new.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="widget-list.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/havanagi-prashant-webdev/public/assignment2/widget/widget-list.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -522,18 +525,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.app" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.page-new.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.website-list.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.page-edit.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.website-edit.html" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.website-new.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.page-edit.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.website-edit.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.website-new.html" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.widget-list.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.page-new.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.website-new.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.website-edit.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.page-edit.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.website-list.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.widget-list.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.page-new.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.website-new.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.website-edit.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.page-edit.html" />
       </list>
     </recent_temporary>
   </component>
@@ -560,15 +563,15 @@
       <workItem from="1485930553639" duration="9497000" />
       <workItem from="1485988819221" duration="3100000" />
       <workItem from="1486002117686" duration="220000" />
-      <workItem from="1486002890591" duration="396000" />
+      <workItem from="1486002890591" duration="1708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57621000" />
+    <option name="totallyTimeSpent" value="58933000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="23" width="1031" height="807" extended-state="0" />
+    <frame x="424" y="23" width="1031" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2841584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -847,21 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment2/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="85" column="67" lean-forward="true" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment2/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -894,50 +882,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-list.html">
+    <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="1368">
+          <caret line="136" column="34" lean-forward="true" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="468">
+          <caret line="74" column="38" lean-forward="false" selection-start-line="74" selection-start-column="38" selection-end-line="74" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment2/website/website-new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="120" column="34" lean-forward="true" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment2/page/page-new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="2010">
+          <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment2/widget/widget-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment2/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
