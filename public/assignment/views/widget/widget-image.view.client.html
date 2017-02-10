@@ -5,7 +5,7 @@
     <link href="../css/styles.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>widget edit</title>
+    <title>widget Edit</title>
 
 </head>
 <body>
@@ -14,12 +14,12 @@
     <div class="row container-fluid">
         <div class="col-xs-12">
             <div class="navbar-text pull-left">
-                <a href="widget-list.html">
+                <a href="widget-list.view.client.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
-                <a href="widget-list.html" class="navbar-link">
+                <a href="widget-list.view.client.html" class="navbar-link">
                   <span class="glyphicon glyphicon glyphicon-ok">
                   </span>
                 </a>
@@ -33,38 +33,54 @@
     </div>
 </nav>
 
+
 <div class="container-fluid">
     <label for="website-name"> Name</label>
-        <input placeholder="Facebook"
-               class="form-control"
-               id="website-name"/>
+    <input placeholder="Website Name"
+           value="Facebook"
+           class="form-control"
+           id="website-name"/>
 
     <label for="website-description">Text</label>
-        <input placeholder="Website Description"
-                  class="form-control"
-                  id="website-description"></input>
+    <input placeholder="Website Description"
+              class="form-control"
+              id="website-description"></input>
 
-    <label for="widge-head">Size</label>
-        <input placeholder="3"
-                  class="form-control"
-                  id="widge-head"></input>
+    <label for="widge-head">URL</label>
+    <input placeholder="https://www.hungama.com"
+              class="form-control"
+              id="widge-head"></input>
 
-    <a href="widget-list.html" class="btn btn-danger btn-block">
+    <label for="widge-width">Width</label>
+    <input placeholder="100%"
+              class="form-control"
+              id="widge-width"></input>
+
+    <label for="widge-file">Upload</label>
+    <input type="file"
+           class="form-control"
+           id="widge-file"></input>
+
+    <a href="#" class="btn btn-success btn-block">
+        Upload Image
+    </a>
+
+    <a href="widget-list.view.client.html" class="btn btn-danger btn-block">
         Delete
     </a>
 </div>
-
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
-                <a href="../user/profile.html">
+                <a href="../views/user/profile.view.client.html">
                     <span class="glyphicon glyphicon glyphicon-user" id="span1"></span>
                 </a>
             </div>
         </div>
     </div>
 </nav>
+
 </body>
 </html>

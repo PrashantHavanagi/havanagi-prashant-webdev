@@ -5,136 +5,141 @@
     <link href="../css/styles.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Website List</title>
+    <title>Page edit</title>
 
 </head>
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-
-    <div class="row container-fluid">
+    <div class="wrapper container-fluid">
+        <div class="row">
         <div class="col-sm-4 hidden-xs">
             <div class="navbar-text pull-left">
-                <a href="website-list.html">
+                <a href="page-list.view.client.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand" href="website-list.html">
-                    websites
+                <a class="navbar-brand">
+                   Pages
                 </a>
             </div>
-
-
             <div class="navbar-text pull-right">
-                <a href="website-new.html">
+                <a href="page-new.view.client.html">
                     <span class="glyphicon glyphicon-plus"></span>
                 </a>
             </div>
         </div>
         <div class="col-sm-8">
             <div class="visible-xs navbar-text pull-left">
-                <a href="website-list.html">
+                <a href="page-list.view.client.html">
                     <span class="glyphicon glyphicon glyphicon-chevron-left"></span>
                 </a>
             </div>
             <div class="navbar-text pull-right">
-                <a href="website-list.html">
+                <a href="page-list.view.client.html">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
             </div>
             <div class="navbar-header">
-                <a class="navbar-brand no-left-padding no-left-margin" href="website-new.html">
-                    New websites
+                <a class="navbar-brand no-left-padding no-left-margin">
+                    Edit Page
                 </a>
             </div>
         </div>
     </div>
+    </div>
 </nav>
 
-<div class="container-fluid">
+<div class="wrapper container-fluid">
     <div class="row">
-    <div class="col-sm-4 hidden-xs">
-
+    <div class="col-sm-4 hidden-xs wbdv-left-pane">
         <ul class="list-group">
 
+
             <li class="list-group-item">
-
-                        <a href="../page/page-list.html">
-                            Blogging App
+                        <a href="../widget/widget-list.view.client.html">
+                            Movies and cricket
                         </a>
-
-                        <a href="website-edit.html">
+                        <a href="page-edit.view.client.html">
                             <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
 
             </li>
 
             <li class="list-group-item">
-
-                        <a href="../page/page-list.html">
-                            All-in-one scores
+                        <a href="../widget/widget-list.view.client.html">
+                            Football score
                         </a>
-                        <a href="website-edit.html">
+                        <a href="page-edit.view.client.html">
                             <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
 
             </li>
 
             <li class="list-group-item">
-                        <a href="../page/page-list.html">
-                            Weight Control
+                        <a href="../widget/widget-list.view.client.html">
+                            Diet Tips
                         </a>
-                        <a href="website-edit.html">
-                            <span class="glyphicon glyphicon-cog pull-right"></span>
-                        </a>
-
-            </li>
-            <li class="list-group-item">
-                        <a href="../page/page-list.html">
-                            Monitor Fitness
-                        </a>
-                        <a href="website-edit.html">
+                        <a href="page-edit.view.client.html">
                             <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
 
             </li>
 
             <li class="list-group-item">
-                        <a href="../page/page-list.html">
-                            Cricket scores
+                        <a href="../widget/widget-list.view.client.html">
+                            Fitness exercise
                         </a>
-                        <a href="website-edit.html">
+                        <a href="page-edit.view.client.html">
                             <span class="glyphicon glyphicon-cog pull-right"></span>
                         </a>
+
+            </li>
+
+            <li class="list-group-item">
+                        <a href="../widget/widget-list.view.client.html">
+                            Latest scores
+                        </a>
+                        <a href="page-edit.view.client.html">
+                            <span class="glyphicon glyphicon-cog pull-right"></span>
+                        </a>
+
             </li>
         </ul>
     </div>
-    <div class="col-sm-8">
-        <label for="website-name">Website Name</label>
-        <input placeholder="Website Name"
+    <div class="col-sm-8 wbdv-right-pane">
+        <label for="page-name"> Name</label>
+        <input placeholder="Blog name"
+               value="Facebook"
                class="form-control"
-               id="website-name"/>
+               id="page-name"/>
 
-        <label for="website-description">Website Description</label>
-        <textarea placeholder="Website Description"
-                  class="form-control" rows="3"
-                  id="website-description"></textarea>
+        <label for="title">Title</label>
+        <input placeholder="name it"
+                  class="form-control"
+                  id="title"></input>
+
+        <a href="page-list.view.client.html" class="btn btn-danger btn-block">
+            Delete
+        </a>
+
 
     </div>
 </div>
 </div>
+
 <nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
+    <div class=" wrapper container-fluid">
         <div class="row navbar-text pull-right ">
             <div class="col-xs-3 pull-right">
-                <a href="../user/profile.html">
+                <a href="../user/profile.view.client.html">
                     <span class="glyphicon glyphicon glyphicon-user" id="span1"></span>
                 </a>
             </div>
         </div>
     </div>
-</nav></nav>
+</nav>
 
 </body>
 </html>
