@@ -9,15 +9,17 @@
         vm.websiteId = $routeParams.wid;
         vm.pageId = $routeParams.pid;
 
-        function init(){
-            vm.widgets = WidgetService.findWidgetsByPageId(vm.pageId);
-        }
-        init();
+
 
         //Event Handlers
         vm.getYouTubeEmbedUrl = getYouTubeEmbedUrl;
         vm.getTrustedHtml = getTrustedHtml;
         vm.getWidgetTemplateUrl = getWidgetTemplateUrl;
+
+        function init(){
+            vm.widgets = WidgetService.findWidgetsByPageId(vm.pageId);
+        }
+        init();
 
         function getWidgetTemplateUrl(widgetType) {
             var url = 'views/widgets/templates/widget-'+widgetType+'.view.client.html';

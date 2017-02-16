@@ -8,6 +8,8 @@
         var vm = this;
         vm.userId = $routeParams.uid;
         vm.websiteId = $routeParams.wid;
+
+        //event handlers
         vm.deleteWebsite = deleteWebsite;
         vm.updateWebsite = updateWebsite;
 

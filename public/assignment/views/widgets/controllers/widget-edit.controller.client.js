@@ -10,15 +10,17 @@
         vm.pageId = $routeParams.pid;
         vm.widgetId = $routeParams.wgid;
 
-        function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
-        }
-        init();
+
 
         //Event Handleres
         vm.getEditorTemplateUrl = getEditorTemplateUrl;
         vm.updateWidget = updateWidget;
         vm.deleteWidget = deleteWidget;
+
+        function init() {
+            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+        }
+        init();
 
         function getEditorTemplateUrl(type) {
             return 'views/widgets/templates/editors/widget-'+type+'-editor.view.client.html';

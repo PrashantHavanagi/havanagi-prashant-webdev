@@ -7,6 +7,8 @@
     function WebsiteNewController($routeParams, $location, WebsiteService) {
         var vm = this;
         vm.userId = $routeParams.uid;
+
+        //event handlers
         vm.createWebsite = createWebsite;
 
         function init() {

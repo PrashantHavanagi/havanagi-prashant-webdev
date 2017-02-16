@@ -16,9 +16,6 @@
         }
         init();
 
-        //Event Handlers
-        vm.createWidget = createWidget;
-
         function createWidget(widgetType) {
             newWidget = {};
             newWidget._id =  (new Date()).getTime().toString();
