@@ -1,27 +1,27 @@
 (function(){
     angular
         .module("WebAppMaker")
-        .controller("WidgetEditController", WidgetEditController);
+        .controller("EditWidgetController", EditWidgetController);
 
-    function WidgetEditController($routeParams, $location, WidgetService) {
+    function EditWidgetController($routeParams, $location, WidgetService) {
         var vm = this;
         vm.userId = $routeParams.uid;
         vm.websiteId = $routeParams.wid;
         vm.pageId = $routeParams.pid;
         vm.widgetId = $routeParams.wgid;
 
-        vm.getEditorTemplateUrl = getEditorTemplateUrl;
-        vm.updateWidget = updateWidget;
-        vm.deleteWidget = deleteWidget;
-        vm.createWidget = createWidget;
-
         function init() {
             vm.widget = WidgetService.findWidgetById(vm.widgetId);
         }
         init();
 
-        function getEditorTemplateUrl(widgetType) {
-            return 'views/widgets/templates/editors/widget-' + widgetType + '-editor.view.client.html';
+        //Event Handleres
+        vm.getEditorTemplateUrl = getEditorTemplateUrl;
+        vm.updateWidget = updateWidget;
+        vm.deleteWidget = deleteWidget;
+
+        function getEditorTemplateUrl(type) {
+            return 'views/widgets/templates/editors/widget-'+type+'-editor.view.client.html';
         }
 
         function updateWidget() {
@@ -32,15 +32,6 @@
         function deleteWidget() {
             WidgetService.deleteWidget(vm.widgetId);
             $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
-        }
-
-        function createWidget(widgetType) {
-            newWidget = {};
-            newWidget._id =  (new Date()).getTime().toString();
-            newWidget.widgetType = widgetType;
-
-            WidgetService.createWidget(vm.pageId, newWidget);
-            $location.url("/user/" + vm.userId +"/website/" +vm.websiteId + "/page/" + vm.pageId + "/widget/" + newWidget._id);
         }
     }
 })();
