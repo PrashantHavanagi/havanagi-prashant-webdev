@@ -4,7 +4,7 @@
         .factory("UserService", userService);
 
     function userService() {
-        var users = [
+            var users = [
             {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
             {_id: "234", username: "bob",      password: "bob",      firstName: "Bob",    lastName: "Marley"  },
             {_id: "345", username: "charly",   password: "charly",   firstName: "Charly", lastName: "Garcia"  },
@@ -20,11 +20,10 @@
         };
         return api;
 
-        function createUser(user) {
-            //TODO : do this
-            var len=users.length;
-            user[len+1]=user;
-            return null;
+        function createUser(newUser) {
+            newUser._id = (new Date()).getTime();
+            users.push(newUser);
+            return newUser;
         }
         
         function findUserByCredentials(username, password) {
@@ -58,19 +57,25 @@
         function updateUser(userId, user) {
             for(var u in users) {
                 if( users[u]._id == userId) {
-                    users[u]=user;
+                    users[u].firstName=user.firstName;
+                    users[u].lastName=user.lastName;
+                    return users[u];
+
                 }
             }
             return null;
         }
 
+
         function deleteUser(userId) {
-            for(var u in users) {
-                if( users[u]._id == userId) {
-                    users[u].removeAll(); //check this
+            for(var u in users){
+                if( users[u]._id == userId){
+                    users.splice(u, 1);
+                    return users;
                 }
             }
             return null;
         }
+
     }
 })();

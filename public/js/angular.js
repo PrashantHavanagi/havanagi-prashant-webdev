@@ -16081,7 +16081,7 @@ function $RootScopeProvider() {
        *
        * @param {boolean} isolate If true, then the scope does not prototypically inherit from the
        *         parent scope. The scope is isolated, as it can not see parent scope properties.
-       *         When creating widgets, it is useful for the widget to not accidentally read parent
+       *         When creating widgets, it is useful for the widgets to not accidentally read parent
        *         state.
        *
        * @param {Scope} [parent=this] The {@link ng.$rootScope.Scope `Scope`} that will be the `$parent`

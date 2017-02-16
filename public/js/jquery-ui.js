@@ -277,7 +277,7 @@ $.fn.extend({
 	}
 });
 
-// $.ui.plugin is deprecated. Use $.widget() extensions instead.
+// $.ui.plugin is deprecated. Use $.widgets() extensions instead.
 $.ui.plugin = {
 	add: function( module, option, set ) {
 		var i,
@@ -345,7 +345,7 @@ $.cleanData = (function( orig ) {
 $.widget = function( name, base, prototype ) {
 	var fullName, existingConstructor, constructor, basePrototype,
 		// proxiedPrototype allows the provided prototype to remain unmodified
-		// so that it can be used as a mixin for multiple widget (#8876)
+		// so that it can be used as a mixin for multiple widgets (#8876)
 		proxiedPrototype = {},
 		namespace = name.split( "." )[ 0 ];
 
@@ -380,10 +380,10 @@ $.widget = function( name, base, prototype ) {
 	$.extend( constructor, existingConstructor, {
 		version: prototype.version,
 		// copy the object used to create the prototype in case we need to
-		// redefine the widget later
+		// redefine the widgets later
 		_proto: $.extend( {}, prototype ),
-		// track widget that inherit from this widget in case this widget is
-		// redefined after a widget inherits from it
+		// track widgets that inherit from this widgets in case this widgets is
+		// redefined after a widgets inherits from it
 		_childConstructors: []
 	});
 
@@ -424,7 +424,7 @@ $.widget = function( name, base, prototype ) {
 	constructor.prototype = $.widget.extend( basePrototype, {
 		// TODO: remove support for widgetEventPrefix
 		// always use the name + a colon as the prefix, e.g., draggable:start
-		// don't prefix for widget that aren't DOM-based
+		// don't prefix for widgets that aren't DOM-based
 		widgetEventPrefix: existingConstructor ? (basePrototype.widgetEventPrefix || name) : name
 	}, proxiedPrototype, {
 		constructor: constructor,
@@ -433,15 +433,15 @@ $.widget = function( name, base, prototype ) {
 		widgetFullName: fullName
 	});
 
-	// If this widget is being redefined then we need to find all widget that
+	// If this widgets is being redefined then we need to find all widgets that
 	// are inheriting from it and redefine all of them so that they inherit from
-	// the new version of this widget. We're essentially trying to replace one
+	// the new version of this widgets. We're essentially trying to replace one
 	// level in the prototype chain.
 	if ( existingConstructor ) {
 		$.each( existingConstructor._childConstructors, function( i, child ) {
 			var childPrototype = child.prototype;
 
-			// redefine the child widget using the same prototype that was
+			// redefine the child widgets using the same prototype that was
 			// originally used, but inherit from the new version of the base
 			$.widget( childPrototype.namespace + "." + childPrototype.widgetName, constructor, child._proto );
 		});
@@ -503,7 +503,7 @@ $.widget.bridge = function( name, object ) {
 						"attempted to call method '" + options + "'" );
 				}
 				if ( !$.isFunction( instance[options] ) || options.charAt( 0 ) === "_" ) {
-					return $.error( "no such method '" + options + "' for " + name + " widget instance" );
+					return $.error( "no such method '" + options + "' for " + name + " widgets instance" );
 				}
 				methodValue = instance[ options ].apply( instance, args );
 				if ( methodValue !== instance && methodValue !== undefined ) {
@@ -674,7 +674,7 @@ $.Widget.prototype = {
 			this.widget()
 				.toggleClass( this.widgetFullName + "-disabled", !!value );
 
-			// If the widget is becoming disabled, then nothing is interactive
+			// If the widgets is becoming disabled, then nothing is interactive
 			if ( value ) {
 				this.hoverable.removeClass( "ui-state-hover" );
 				this.focusable.removeClass( "ui-state-focus" );
@@ -714,7 +714,7 @@ $.Widget.prototype = {
 
 		$.each( handlers, function( event, handler ) {
 			function handlerProxy() {
-				// allow widget to customize the disabled handling
+				// allow widgets to customize the disabled handling
 				// - disabled as an array instead of boolean
 				// - disabled class as method for disabling individual parts
 				if ( !suppressDisabledCheck &&
@@ -910,7 +910,7 @@ var mouse = $.widget("ui.mouse", {
 	},
 
 	_mouseDown: function(event) {
-		// don't let more than one widget handle mouseStart
+		// don't let more than one widgets handle mouseStart
 		if ( mouseHandled ) {
 			return;
 		}
@@ -5822,7 +5822,7 @@ var accordion = $.widget( "ui.accordion", {
 	_create: function() {
 		var options = this.options;
 		this.prevShow = this.prevHide = $();
-		this.element.addClass( "ui-accordion ui-widget ui-helper-reset" )
+		this.element.addClass( "ui-accordion ui-widgets ui-helper-reset" )
 			// ARIA
 			.attr( "role", "tablist" );
 
@@ -5871,7 +5871,7 @@ var accordion = $.widget( "ui.accordion", {
 
 		// clean up main element
 		this.element
-			.removeClass( "ui-accordion ui-widget ui-helper-reset" )
+			.removeClass( "ui-accordion ui-widgets ui-helper-reset" )
 			.removeAttr( "role" );
 
 		// clean up headers
@@ -5889,7 +5889,7 @@ var accordion = $.widget( "ui.accordion", {
 
 		// clean up content panels
 		contents = this.headers.next()
-			.removeClass( "ui-helper-reset ui-widget-content ui-corner-bottom " +
+			.removeClass( "ui-helper-reset ui-widgets-content ui-corner-bottom " +
 				"ui-accordion-content ui-accordion-content-active ui-state-disabled" )
 			.css( "display", "" )
 			.removeAttr( "role" )
@@ -6026,7 +6026,7 @@ var accordion = $.widget( "ui.accordion", {
 			.addClass( "ui-accordion-header ui-state-default ui-corner-all" );
 
 		this.panels = this.headers.next()
-			.addClass( "ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" )
+			.addClass( "ui-accordion-content ui-helper-reset ui-widgets-content ui-corner-bottom" )
 			.filter( ":not(.ui-accordion-content-active)" )
 			.hide();
 
@@ -6390,7 +6390,7 @@ var menu = $.widget( "ui.menu", {
 		this.mouseHandled = false;
 		this.element
 			.uniqueId()
-			.addClass( "ui-menu ui-widget ui-widget-content" )
+			.addClass( "ui-menu ui-widgets ui-widgets-content" )
 			.toggleClass( "ui-menu-icons", !!this.element.find( ".ui-icon" ).length )
 			.attr({
 				role: this.options.role,
@@ -6489,7 +6489,7 @@ var menu = $.widget( "ui.menu", {
 		this.element
 			.removeAttr( "aria-activedescendant" )
 			.find( ".ui-menu" ).addBack()
-				.removeClass( "ui-menu ui-widget ui-widget-content ui-menu-icons ui-front" )
+				.removeClass( "ui-menu ui-widgets ui-widgets-content ui-menu-icons ui-front" )
 				.removeAttr( "role" )
 				.removeAttr( "tabIndex" )
 				.removeAttr( "aria-labelledby" )
@@ -6517,7 +6517,7 @@ var menu = $.widget( "ui.menu", {
 			});
 
 		// Destroy menu dividers
-		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ui-widget-content" );
+		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ui-widgets-content" );
 	},
 
 	_keydown: function( event ) {
@@ -6620,7 +6620,7 @@ var menu = $.widget( "ui.menu", {
 
 		// Initialize nested menus
 		submenus.filter( ":not(.ui-menu)" )
-			.addClass( "ui-menu ui-widget ui-widget-content ui-front" )
+			.addClass( "ui-menu ui-widgets ui-widgets-content ui-front" )
 			.hide()
 			.attr({
 				role: this.options.role,
@@ -6647,7 +6647,7 @@ var menu = $.widget( "ui.menu", {
 		items.not( ".ui-menu-item" ).each(function() {
 			var item = $( this );
 			if ( that._isDivider( item ) ) {
-				item.addClass( "ui-widget-content ui-menu-divider" );
+				item.addClass( "ui-widgets-content ui-menu-divider" );
 			}
 		});
 
@@ -7277,7 +7277,7 @@ $.widget( "ui.autocomplete", {
 
 		// turning off autocomplete prevents the browser from remembering the
 		// value when navigating through history, so we re-enable autocomplete
-		// if the page is unloaded before the widget is destroyed. #7790
+		// if the page is unloaded before the widgets is destroyed. #7790
 		this._on( this.window, {
 			beforeunload: function() {
 				this.element.removeAttr( "autocomplete" );
@@ -7604,7 +7604,7 @@ var autocomplete = $.ui.autocomplete;
 
 
 var lastActive,
-	baseClasses = "ui-button ui-widget ui-state-default ui-corner-all",
+	baseClasses = "ui-button ui-widgets ui-state-default ui-corner-all",
 	typeClasses = "ui-button-icons-only ui-button-icon-only ui-button-text-icons ui-button-text-icon-primary ui-button-text-icon-secondary ui-button-text-only",
 	formResetHandler = function() {
 		var form = $( this );
@@ -8118,7 +8118,7 @@ function Datepicker() {
 	$.extend(this._defaults, this.regional[""]);
 	this.regional.en = $.extend( true, {}, this.regional[ "" ]);
 	this.regional[ "en-US" ] = $.extend( true, {}, this.regional.en );
-	this.dpDiv = datepicker_bindHover($("<div id='" + this._mainDivId + "' class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>"));
+	this.dpDiv = datepicker_bindHover($("<div id='" + this._mainDivId + "' class='ui-datepicker ui-widgets ui-widgets-content ui-helper-clearfix ui-corner-all'></div>"));
 }
 
 $.extend(Datepicker.prototype, {
@@ -8128,7 +8128,7 @@ $.extend(Datepicker.prototype, {
 	//Keep track of the maximum number of rows displayed (see #7043)
 	maxRows: 4,
 
-	// TODO rename to "widget" when switching to widget factory
+	// TODO rename to "widgets" when switching to widgets factory
 	_widgetDatepicker: function() {
 		return this.dpDiv;
 	},
@@ -8171,7 +8171,7 @@ $.extend(Datepicker.prototype, {
 			drawMonth: 0, drawYear: 0, // month being drawn
 			inline: inline, // is datepicker inline or not
 			dpDiv: (!inline ? this.dpDiv : // presentation div
-			datepicker_bindHover($("<div class='" + this._inlineClass + " ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>")))};
+			datepicker_bindHover($("<div class='" + this._inlineClass + " ui-datepicker ui-widgets ui-widgets-content ui-helper-clearfix ui-corner-all'></div>")))};
 	},
 
 	/* Attach the date picker to an input field. */
@@ -9670,7 +9670,7 @@ $.extend(Datepicker.prototype, {
 		controls = (!inst.inline ? "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" +
 			this._get(inst, "closeText") + "</button>" : "");
 
-		buttonPanel = (showButtonPanel) ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + (isRTL ? controls : "") +
+		buttonPanel = (showButtonPanel) ? "<div class='ui-datepicker-buttonpane ui-widgets-content'>" + (isRTL ? controls : "") +
 			(this._isInRange(inst, gotoDate) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'" +
 			">" + currentText + "</button>" : "") + (isRTL ? "" : controls) + "</div>" : "";
 
@@ -9708,7 +9708,7 @@ $.extend(Datepicker.prototype, {
 					}
 					calender += "'>";
 				}
-				calender += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
+				calender += "<div class='ui-datepicker-header ui-widgets-header ui-helper-clearfix" + cornerClass + "'>" +
 					(/all|left/.test(cornerClass) && row === 0 ? (isRTL ? next : prev) : "") +
 					(/all|right/.test(cornerClass) && row === 0 ? (isRTL ? prev : next) : "") +
 					this._generateMonthYearHeader(inst, drawMonth, drawYear, minDate, maxDate,
@@ -10156,7 +10156,7 @@ var dialog = $.widget( "ui.dialog", {
 		this.element
 			.show()
 			.removeAttr( "title" )
-			.addClass( "ui-dialog-content ui-widget-content" )
+			.addClass( "ui-dialog-content ui-widgets-content" )
 			.appendTo( this.uiDialog );
 
 		this._createTitlebar();
@@ -10197,7 +10197,7 @@ var dialog = $.widget( "ui.dialog", {
 
 		this.element
 			.removeUniqueId()
-			.removeClass( "ui-dialog-content ui-widget-content" )
+			.removeClass( "ui-dialog-content ui-widgets-content" )
 			.css( this.originalCss )
 			// Without detaching first, the following becomes really slow
 			.detach();
@@ -10370,7 +10370,7 @@ var dialog = $.widget( "ui.dialog", {
 
 	_createWrapper: function() {
 		this.uiDialog = $("<div>")
-			.addClass( "ui-dialog ui-widget ui-widget-content ui-corner-all ui-front " +
+			.addClass( "ui-dialog ui-widgets ui-widgets-content ui-corner-all ui-front " +
 				this.options.dialogClass )
 			.hide()
 			.attr({
@@ -10430,7 +10430,7 @@ var dialog = $.widget( "ui.dialog", {
 		var uiDialogTitle;
 
 		this.uiDialogTitlebar = $( "<div>" )
-			.addClass( "ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" )
+			.addClass( "ui-dialog-titlebar ui-widgets-header ui-corner-all ui-helper-clearfix" )
 			.prependTo( this.uiDialog );
 		this._on( this.uiDialogTitlebar, {
 			mousedown: function( event ) {
@@ -10484,7 +10484,7 @@ var dialog = $.widget( "ui.dialog", {
 
 	_createButtonPane: function() {
 		this.uiDialogButtonPane = $( "<div>" )
-			.addClass( "ui-dialog-buttonpane ui-widget-content ui-helper-clearfix" );
+			.addClass( "ui-dialog-buttonpane ui-widgets-content ui-helper-clearfix" );
 
 		this.uiButtonSet = $( "<div>" )
 			.addClass( "ui-dialog-buttonset" )
@@ -10884,7 +10884,7 @@ var dialog = $.widget( "ui.dialog", {
 		}
 
 		this.overlay = $( "<div>" )
-			.addClass( "ui-widget-overlay ui-front" )
+			.addClass( "ui-widgets-overlay ui-front" )
 			.appendTo( this._appendTo() );
 		this._on( this.overlay, {
 			mousedown: "_keepFocus"
@@ -10945,7 +10945,7 @@ var progressbar = $.widget( "ui.progressbar", {
 		this.oldValue = this.options.value = this._constrainedValue();
 
 		this.element
-			.addClass( "ui-progressbar ui-widget ui-widget-content ui-corner-all" )
+			.addClass( "ui-progressbar ui-widgets ui-widgets-content ui-corner-all" )
 			.attr({
 				// Only set static values, aria-valuenow and aria-valuemax are
 				// set inside _refreshValue()
@@ -10953,7 +10953,7 @@ var progressbar = $.widget( "ui.progressbar", {
 				"aria-valuemin": this.min
 			});
 
-		this.valueDiv = $( "<div class='ui-progressbar-value ui-widget-header ui-corner-left'></div>" )
+		this.valueDiv = $( "<div class='ui-progressbar-value ui-widgets-header ui-corner-left'></div>" )
 			.appendTo( this.element );
 
 		this._refreshValue();
@@ -10961,7 +10961,7 @@ var progressbar = $.widget( "ui.progressbar", {
 
 	_destroy: function() {
 		this.element
-			.removeClass( "ui-progressbar ui-widget ui-widget-content ui-corner-all" )
+			.removeClass( "ui-progressbar ui-widgets ui-widgets-content ui-corner-all" )
 			.removeAttr( "role" )
 			.removeAttr( "aria-valuemin" )
 			.removeAttr( "aria-valuemax" )
@@ -11130,7 +11130,7 @@ var selectmenu = $.widget( "ui.selectmenu", {
 
 		// Create button
 		this.button = $( "<span>", {
-			"class": "ui-selectmenu-button ui-widget ui-state-default ui-corner-all",
+			"class": "ui-selectmenu-button ui-widgets ui-state-default ui-corner-all",
 			tabindex: this.options.disabled ? -1 : 0,
 			id: this.ids.button,
 			role: "combobox",
@@ -11184,7 +11184,7 @@ var selectmenu = $.widget( "ui.selectmenu", {
 			.append( this.menu )
 			.appendTo( this._appendTo() );
 
-		// Initialize menu widget
+		// Initialize menu widgets
 		this.menuInstance = this.menu
 			.menu({
 				role: "listbox",
@@ -11710,8 +11710,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		this.element
 			.addClass( "ui-slider" +
 				" ui-slider-" + this.orientation +
-				" ui-widget" +
-				" ui-widget-content" +
+				" ui-widgets" +
+				" ui-widgets-content" +
 				" ui-corner-all");
 
 		this._refresh();
@@ -11776,7 +11776,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 				classes = "ui-slider-range" +
 				// note: this isn't the most fittingly semantic framework class for this element,
 				// but worked best visually with a variety of themes
-				" ui-widget-header ui-corner-all";
+				" ui-widgets-header ui-corner-all";
 			} else {
 				this.range.removeClass( "ui-slider-range-min ui-slider-range-max" )
 					// Handle range switching from true to min/max
@@ -11813,8 +11813,8 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			.removeClass( "ui-slider" +
 				" ui-slider-horizontal" +
 				" ui-slider-vertical" +
-				" ui-widget" +
-				" ui-widget-content" +
+				" ui-widgets" +
+				" ui-widgets-content" +
 				" ui-corner-all" );
 
 		this._mouseDestroy();
@@ -12427,7 +12427,7 @@ var spinner = $.widget( "ui.spinner", {
 
 		// turning off autocomplete prevents the browser from remembering the
 		// value when navigating through history, so we re-enable autocomplete
-		// if the page is unloaded before the widget is destroyed. #7790
+		// if the page is unloaded before the widgets is destroyed. #7790
 		this._on( this.window, {
 			beforeunload: function() {
 				this.element.removeAttr( "autocomplete" );
@@ -12603,7 +12603,7 @@ var spinner = $.widget( "ui.spinner", {
 	},
 
 	_uiSpinnerHtml: function() {
-		return "<span class='ui-spinner ui-widget ui-widget-content ui-corner-all'></span>";
+		return "<span class='ui-spinner ui-widgets ui-widgets-content ui-corner-all'></span>";
 	},
 
 	_buttonHtml: function() {
@@ -12923,7 +12923,7 @@ var tabs = $.widget( "ui.tabs", {
 		this.running = false;
 
 		this.element
-			.addClass( "ui-tabs ui-widget ui-widget-content ui-corner-all" )
+			.addClass( "ui-tabs ui-widgets ui-widgets-content ui-corner-all" )
 			.toggleClass( "ui-tabs-collapsible", options.collapsible );
 
 		this._processTabs();
@@ -13123,7 +13123,7 @@ var tabs = $.widget( "ui.tabs", {
 		}
 
 		if ( key === "disabled" ) {
-			// don't use the widget factory's disabled handling
+			// don't use the widgets factory's disabled handling
 			this._setupDisabled( value );
 			return;
 		}
@@ -13228,7 +13228,7 @@ var tabs = $.widget( "ui.tabs", {
 			prevPanels = this.panels;
 
 		this.tablist = this._getList()
-			.addClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" )
+			.addClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widgets-header ui-corner-all" )
 			.attr( "role", "tablist" )
 
 			// Prevent users from focusing disabled tabs via click
@@ -13307,7 +13307,7 @@ var tabs = $.widget( "ui.tabs", {
 		});
 
 		this.panels
-			.addClass( "ui-tabs-panel ui-widget-content ui-corner-bottom" )
+			.addClass( "ui-tabs-panel ui-widgets-content ui-corner-bottom" )
 			.attr( "role", "tabpanel" );
 
 		// Avoid memory leaks (#10056)
@@ -13326,7 +13326,7 @@ var tabs = $.widget( "ui.tabs", {
 	_createPanel: function( id ) {
 		return $( "<div>" )
 			.attr( "id", id )
-			.addClass( "ui-tabs-panel ui-widget-content ui-corner-bottom" )
+			.addClass( "ui-tabs-panel ui-widgets-content ui-corner-bottom" )
 			.data( "ui-tabs-destroy", true );
 	},
 
@@ -13561,10 +13561,10 @@ var tabs = $.widget( "ui.tabs", {
 			this.xhr.abort();
 		}
 
-		this.element.removeClass( "ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-collapsible" );
+		this.element.removeClass( "ui-tabs ui-widgets ui-widgets-content ui-corner-all ui-tabs-collapsible" );
 
 		this.tablist
-			.removeClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" )
+			.removeClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widgets-header ui-corner-all" )
 			.removeAttr( "role" );
 
 		this.anchors
@@ -13581,7 +13581,7 @@ var tabs = $.widget( "ui.tabs", {
 			} else {
 				$( this )
 					.removeClass( "ui-state-default ui-state-active ui-state-disabled " +
-						"ui-corner-top ui-corner-bottom ui-widget-content ui-tabs-active ui-tabs-panel" )
+						"ui-corner-top ui-corner-bottom ui-widgets-content ui-tabs-active ui-tabs-panel" )
 					.removeAttr( "tabIndex" )
 					.removeAttr( "aria-live" )
 					.removeAttr( "aria-busy" )
@@ -14136,7 +14136,7 @@ var tooltip = $.widget( "ui.tooltip", {
 	_tooltip: function( element ) {
 		var tooltip = $( "<div>" )
 				.attr( "role", "tooltip" )
-				.addClass( "ui-tooltip ui-widget ui-corner-all ui-widget-content " +
+				.addClass( "ui-tooltip ui-widgets ui-corner-all ui-widgets-content " +
 					( this.options.tooltipClass || "" ) ),
 			id = tooltip.uniqueId().attr( "id" );
 

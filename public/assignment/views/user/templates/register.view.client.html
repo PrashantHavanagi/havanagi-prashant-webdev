@@ -15,16 +15,25 @@
 
     <div class="container-fluid">
 
-
         <form>
             <div class="form-group">
+                <label for="firstname" class="">First Name</label>
+                <input ng-model="model.user.firstName" id="firstname" type="text"
+                       class="form-control"
+                       placeholder="username"/>
+
+                <label for="lastname" class="">Last Name</label>
+                <input ng-model="model.user.lastName" id="lastname" type="text"
+                       class="form-control"
+                       placeholder="username"/>
+
         <label for="username" class="">Username</label>
-        <input id="username" type="text"
+        <input ng-model="model.user.username" id="username" type="text"
                class="form-control"
                placeholder="username"/>
 
         <label for="password" class="">Password</label>
-        <input id="password" type="password"
+        <input ng-model="model.user.password" id="password" type="password"
                class="form-control"
                placeholder="password"/>
 
@@ -36,7 +45,7 @@
             </div>
         </form>
         <a class="btn btn-primary btn-block"
-           href="#user/123">Register</a>
+           ng-click="model.register(model.user)">Register</a>
 
         <a class="btn btn-danger  btn-block"
            href="#login">Cancel</a>
