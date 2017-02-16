@@ -1,17 +1,33 @@
-<h1>HEADER Editor</h1>
+<div class="form-group">
+    <label for="header-name">Name</label>
+    <input ng-model="model.widget.name"
+           type="text"
+           placeholder="Header Name"
+           class="form-control"
+           id="header-name"/>
+</div>
 
-<label>Name</label>
-<input ng-model="model.widget.name" class="form-control"/>
+<div class="form-group">
+    <label for="header-text">Text</label>
+    <input ng-model="model.widget.text"
+           type="text"
+           placeholder="Header Text"
+           value="How about having specialists at short leg?"
+           class="form-control"
+           id="header-text"/>
+</div>
 
-<label>Text</label>
-<input ng-model="model.widget.text" class="form-control"/>
-
-<label>Size</label>
-<select class="form-control">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-</select>
+<label for="header-size">Size</label>
+<div>
+    <select ng-model="model.widget.size"
+            id="header-size"
+            class="form-control"
+            type="text">
+        <option ng-selected="model.widget.size == 1" value=1 >1</option>
+        <option ng-selected="model.widget.size == 2" value=2>2</option>
+        <option ng-selected="model.widget.size == 3" value=3>3</option>
+        <option ng-selected="model.widget.size == 4" value=4>4</option>
+        <option ng-selected="model.widget.size == 5" value=5>5</option>
+        <option ng-selected="model.widget.size == 6" value=6>6</option>
+    </select>
+</div>
