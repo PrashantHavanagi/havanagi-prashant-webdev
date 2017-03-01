@@ -1,41 +1,50 @@
-(function () {
+(function(){
     angular
         .module("WebAppMaker")
-        .controller("ProfileController", ProfileController);
-    
-    function ProfileController($routeParams, UserService) {
+        .controller("ProfileController", profileController);
+
+    function profileController($routeParams, $location, UserService) {
         var vm = this;
-
-        // event handlers
-        vm.updateUser = updateUser;
-        vm.deleteUser = deleteUser;
-
         var userId = $routeParams['uid'];
+        vm.unregisterUser = unregisterUser;
+        vm.updateUser=updateUser;
 
         function init() {
-            var user = UserService.findUserById(userId);
-            vm.user = user;
+            UserService
+                .findUserById(userId)
+                .success(renderUser);
         }
         init();
 
-        function updateUser(newUser) {
-            var user = UserService.updateUser(userId, newUser);
-            if(user != null) {
-                vm.message = "User Successfully Updated!"
-            } else {
-                vm.error = "Unable to update user";
+        function unregisterUser(user) {
+            var answer = confirm("Are you sure?");
+            console.log(answer);
+            if(answer) {
+                UserService
+                    .deleteUser(user._id)
+                    .success(function () {
+                        $location.url("/login");
+                    })
+                    .error(function () {
+                        vm.error = 'unable to remove user';
+                    });
             }
         }
 
-        function deleteUser(userId) {
-            var users = UserService.deleteUser(userId);
-            vm.users = users;
-            if (users != null) {
-                vm.message = "User Successfully Deleted!"
-            } else {
-                vm.error = "Unable to delete user";
-            }
+        function renderUser(user) {
+            vm.user = user;
+            console.log(user);
         }
-
+//vm.update = function updateUser(newUser)
+         function updateUser(newUser) {
+            UserService
+                .updateUser(userId, newUser)
+                .success(function (response) {
+                    vm.message = "user successfully updated"
+                })
+                .error(function () {
+                    vm.error = "unable to update user";
+                });
         }
+    }
 })();

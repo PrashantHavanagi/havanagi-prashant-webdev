@@ -10,30 +10,57 @@
         vm.pageId = $routeParams.pid;
         vm.widgetId = $routeParams.wgid;
 
-
-
         //Event Handleres
-        vm.getEditorTemplateUrl = getEditorTemplateUrl;
         vm.updateWidget = updateWidget;
         vm.deleteWidget = deleteWidget;
-
+        vm.createWidget = createWidget;
         function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+            WidgetService
+                .findWidgetById(vm.widgetId)
+                .success(function (widget) {
+                    vm.widget = widget;
+                })
         }
         init();
 
-        function getEditorTemplateUrl(type) {
-            return 'views/widgets/templates/editors/widget-'+type+'-editor.view.client.html';
+        function createWidget(widgetType) {
+            newWidget = {};
+            newWidget._id =  (new Date()).getTime().toString();
+            newWidget.widgetType = widgetType;
+
+            WidgetService
+                .createWidget(vm.pageId, newWidget)
+                .success(function(widget){
+                    $location.url("/user/" + vm.userId +"/website/" +vm.websiteId + "/page/" + vm.pageId + "/widget/" + newWidget._id);
+                })
+                .error(function () {
+                    vm.error = 'sorry could not create widget';
+                });
         }
 
         function updateWidget() {
-            WidgetService.updateWidget(vm.widgetId, vm.widget);
-            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
+            WidgetService
+                .updateWidget(vm.widgetId, vm.widget)
+                .success(function (widget) {
+                    $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
+                })
+                .error(function (err) {
+                    vm.error = 'unable to update widget';
+                });
         }
 
         function deleteWidget() {
-            WidgetService.deleteWidget(vm.widgetId);
-            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
+            var answer = confirm("Are you sure?");
+            if(answer) {
+                WidgetService
+                    .deleteWidget(vm.widgetId)
+                    .success(function () {
+                        $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
+                    })
+                    .error(function () {
+                        vm.error = 'unable to remove widget';
+                    });
+            }
         }
     }
 })();
