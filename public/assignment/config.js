@@ -45,7 +45,7 @@
             })
             .when("/user/:uid/website/:wid/page/new", {
                 templateUrl: "views/pages/templates/page-new.view.client.html",
-                controller: "New PageController",
+                controller: "NewPageController",
                 controllerAs: "model"
             })
             .when("/user/:uid/website/:wid/page/:pid", {

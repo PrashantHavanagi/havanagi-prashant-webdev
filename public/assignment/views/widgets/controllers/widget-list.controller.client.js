@@ -22,6 +22,10 @@
         }
         init();
 
+        $(".widget-list").sortable({
+            axis: "y"
+        });
+
         function getWidgetTemplateUrl(widgetType) {
             var url = 'views/widgets/templates/widget-'+widgetType+'.view.client.html';
             return url;

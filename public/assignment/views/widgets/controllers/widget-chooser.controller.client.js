@@ -35,7 +35,7 @@
                 });
         }
         function uploadImage(){
-            console.log("HAHAHA");
+            //console.log("HAHAHA");
             return $http.post("/api/upload");
         }
 

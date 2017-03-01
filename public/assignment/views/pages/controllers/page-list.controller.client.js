@@ -9,7 +9,7 @@
         vm.userId = $routeParams.uid;
 
         function init(){
-            var pages = PageService
+            PageService
                 .findPageByWebsiteId(vm.websiteId)
                 .success(function (pages) {
                     vm.pages = pages;

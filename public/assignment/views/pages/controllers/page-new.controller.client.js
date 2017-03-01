@@ -12,7 +12,7 @@
         vm.createPage = createPage;
 
         function init() {
-            var pages = PageService
+            PageService
                 .findPageByWebsiteId(vm.websiteId)
                 .success(function (pages) {
                     vm.pages = pages;
@@ -27,7 +27,7 @@
                     $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page");
                 })
                 .error(function () {
-                    vm.error = 'sorry could not create page';
+                    vm.error = "sorry could not create page";
                 });
         };
     }
