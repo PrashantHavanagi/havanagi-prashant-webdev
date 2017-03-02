@@ -12,24 +12,34 @@ module.exports = function (app) {
 
     function uploadImage(req, res) {
 
-        var pageId = null;
         var widgetId = req.body.widgetId;
         var width = req.body.width;
         var userId = req.body.userId;
         var websiteId = req.body.websiteId;
         var myFile = req.file;
-        var destination = myFile.destination; // folder where file is saved to
+        var pageId = req.body.pageId;
 
-        for (var i in widgets) {
-            if (widgets[i]._id === widgetId) {
-                widgets[i].width = width;
-                widgets[i].url = req.protocol + '://' + req.get('host') + "/uploads/" + myFile.filename;
-                pageId = widgets[i].pageId;
-            }
+        if (myFile == undefined) {
+            res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
         }
+        else {
+            var destination = myFile.destination; // folder where file is saved to
 
-        res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
+
+            for (var i in widgets) {
+                if (widgets[i]._id === widgetId) {
+                    widgets[i].width = width;
+                    widgets[i].url = req.protocol + '://' + req.get('host') + "/uploads/" + myFile.filename;
+
+                }
+            }
+
+
+            res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
+        }
     }
+
+
 
      var widgets = [
         { "_id": "123", "widgetType": "HEADER", "pageId": "321", "size": 2, "text": "GIZMODO"},
@@ -65,7 +75,7 @@ module.exports = function (app) {
                 break;
             case "IMAGE":
                 widget.width = "100%";
-                widget.url = "http://lorempixel.com/";
+                widget.url = "http://lorempixel.com/400/200/sports/Dummy-Text/";
                 break;
             case "YOUTUBE":
                 widget.width = "100%";
