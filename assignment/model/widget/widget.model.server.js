@@ -21,10 +21,9 @@ module.exports = function () {
 
     
     function deleteImageUploads(imageUrl) {
-        // Local helper function
+
         if(imageUrl && imageUrl.search('http') == -1){
-            // Locally uploaded image
-            // Delete it
+
             fs.unlink(publicDirectory+imageUrl, function (err) {
                 if(err){
                     console.log(err);
@@ -91,8 +90,7 @@ module.exports = function () {
         return WidgetModel.update({_id:widgetId},{$set: updatedWidget});
     }
     function deleteWidget(widgetId){
-        // Delete the widget, its reference in the parent page and delete the image
-        // associated (if the widget is an IMAGE widget)
+
         return WidgetModel.findById(widgetId).populate('_page').then(function (widget) {
             widget._page.widgets.splice(widget._page.widgets.indexOf(widgetId),1);
             widget._page.save();
@@ -106,7 +104,7 @@ module.exports = function () {
     }
 
     function deleteWidgetOfPage(widgetId) {
-        // Delete the widget and the associated image (if present)
+
         return WidgetModel.findById(widgetId)
             .then(function (widget) {
                 if(widget.type == "IMAGE"){

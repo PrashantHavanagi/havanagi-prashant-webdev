@@ -46,7 +46,7 @@ module.exports = function (app,widgetModel) {
         };
 
         if(req.file){
-            // Make sure file was uploaded
+
             var myFile = req.file;
             var originalname = myFile.originalname;
             var filename = myFile.filename;
@@ -126,7 +126,7 @@ module.exports = function (app,widgetModel) {
     }
 
     function deleteUploadedImage(imageUrl) {
-        // Local helper function
+
         if(imageUrl && imageUrl.search('http') == -1){
 
             fs.unlink(publicDirectory+imageUrl, function (err) {

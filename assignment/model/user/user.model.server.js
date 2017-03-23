@@ -17,8 +17,7 @@
     return api;
 
     function createUser(user) {
-        // remember this _id from our local arrays, discard them
-        // We don't need them anymore
+
         delete user._id;
         return UserModel.create(user);
     }

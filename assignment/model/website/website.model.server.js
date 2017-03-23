@@ -47,7 +47,7 @@ module.exports = function () {
         return WebsiteModel.update({_id:websiteId},{$set:updatedWebsite});
     }
     function deleteWebsite(websiteId){
-        // Delete a website, its reference in parent and its children
+
         return WebsiteModel.findOne({_id:websiteId}).populate('_user').then(function (website) {
             website._user.websites.splice(website._user.websites.indexOf(websiteId),1);
             website._user.save();
@@ -59,8 +59,7 @@ module.exports = function () {
 
     function deleteAll(pagesOfWebsite, websiteId) {
         if(pagesOfWebsite.length == 0){
-            // All pages of website successfully deleted
-            // Delete the website
+
             return WebsiteModel.remove({_id: websiteId})
                 .then(function (response) {
                     if(response.result.n == 1 && response.result.ok == 1){
@@ -82,7 +81,7 @@ module.exports = function () {
     }
 
     function deleteChildren(websiteId){
-        // Delete the website and its children (pages)
+
         return WebsiteModel.findById({_id: websiteId}).select({'pages':1})
             .then(function (website) {
                 var pagesOfWebsite = website.pages;
