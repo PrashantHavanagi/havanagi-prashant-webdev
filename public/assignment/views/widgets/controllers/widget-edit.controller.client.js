@@ -26,7 +26,7 @@
         function createWidget(widgetType) {
             newWidget = {};
             newWidget._id =  (new Date()).getTime().toString();
-            newWidget.widgetType = widgetType;
+            newWidget.type = widgetType;
 
             WidgetService
                 .createWidget(vm.pageId, newWidget)
@@ -38,9 +38,9 @@
                 });
         }
 
-        function updateWidget() {
+        function updateWidget(widget) {
             WidgetService
-                .updateWidget(vm.widgetId, vm.widget)
+                .updateWidget(vm.widgetId,widget)
                 .success(function (widget) {
                     $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/" + vm.pageId + "/widget" );
                 })

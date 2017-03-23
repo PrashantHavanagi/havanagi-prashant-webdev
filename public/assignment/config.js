@@ -67,9 +67,14 @@
                 templateUrl: "views/widgets/templates/widget-edit.view.client.html",
                 controller: "EditWidgetController",
                 controllerAs: "model"
+            })
+            .when("/user/:uid/website/:wid/page/:pid/widget/:wgid/flickrsearch",{
+            templateUrl: "views/widgets/templates/widget-flickr-search.view.client.html",
+            controller: "FlickrImageSearchController",
+            controllerAs: "model"
             });
            // .otherwise({
-                redirectTo: "/login"
-            //});
+           //      redirectTo: "/login"
+           //  });
     }
 })();

@@ -1,146 +1,179 @@
-module.exports = function (app) {
+module.exports = function (app,widgetModel) {
     app.get("/api/widget/:widgetId", findWidgetById);
     app.get("/api/page/:pageId/widget", findAllWidgetsForPage);
     app.put("/api/widget/:widgetId", updateWidget);
     app.delete("/api/widget/:widgetId", deleteWidget);
     app.post("/api/page/:pageId/widget", createWidget);
+    app.put("/page/:pid/widget", updateWidgetOrder);
 
     var multer = require('multer'); // npm install multer --save
-    var upload = multer({ dest: __dirname+'/../../public/uploads' });
+    var fs = require("fs");
+    var uploadsDirectory = __dirname+"/../../public/uploads";
+    var publicDirectory =__dirname+"/../../public";
+    var storage = multer.diskStorage({
+        destination: function (req, file, cb) {
+            if(!fs.existsSync(uploadsDirectory)){
 
+                console.log("Going to create directory "+uploadsDirectory);
+                fs.mkdir(uploadsDirectory, function(err){
+                    if (err) {
+                        return console.error(err);
+                    }
+                    console.log("Directory created successfully!");
+                });
+            }
+            cb(null, uploadsDirectory);
+        },
+        filename: function (req, file, cb) {
+            var extArray = file.mimetype.split("/");
+            var extension = extArray[extArray.length - 1];
+            cb(null, 'widget_image_' + Date.now()+ '.' +extension)
+        }
+    });
+    var upload = multer({storage: storage});
     app.post ("/api/upload", upload.single('myFile'), uploadImage);
 
-    function uploadImage(req, res) {
-
+    function uploadImage(req, res){
         var widgetId = req.body.widgetId;
         var width = req.body.width;
         var userId = req.body.userId;
         var websiteId = req.body.websiteId;
         var myFile = req.file;
         var pageId = req.body.pageId;
+        var imageWidget = {
+            width: width,
+            _id:widgetId
+        };
 
-        if (myFile == undefined) {
-            res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
-        }
-        else {
-            var destination = myFile.destination; // folder where file is saved to
+        if(req.file){
+            // Make sure file was uploaded
+            var myFile = req.file;
+            var originalname = myFile.originalname;
+            var filename = myFile.filename;
+            var path = myFile.path;
+            var destination = myFile.destination;
+            var size = myFile.size;
+            var mimetype = myFile.mimetype;
+            if(imageWidget.url){
 
-
-            for (var i in widgets) {
-                if (widgets[i]._id === widgetId) {
-                    widgets[i].width = width;
-                    widgets[i].url = req.protocol + '://' + req.get('host') + "/uploads/" + myFile.filename;
-
-                }
+                deleteUploadedImage(imageWidget.url);
             }
+            imageWidget.url = "/uploads/" + filename;
 
+            widgetModel
+                .updateWidget(widgetId, imageWidget)
+                .then(function (response) {
+                    if(response.ok === 1 && response.n === 1){
+
+                        res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
+                    }
+                    else{
+                        res.sendStatus(404);
+                    }
+                }, function (err) {
+                    res.sendStatus(404);
+                });
+
+        }
+        else{
 
             res.redirect("/assignment/#/user/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/");
         }
     }
 
-
-
-     var widgets = [
-        { "_id": "123", "widgetType": "HEADER", "pageId": "321", "size": 2, "text": "GIZMODO"},
-        { "_id": "234", "widgetType": "HEADER", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-        { "_id": "345", "widgetType": "IMAGE", "pageId": "321", "width": "100%",
-            "url": "https://i.kinja-img.com/gawker-media/image/upload/s--UE7cu6DV--/c_scale,fl_progressive,q_80,w_800/xoo0evqxzxrrmrn4ayoq.jpg"},
-        { "_id": "456", "widgetType": "HTML", "pageId": "321", "text": '<p>Anker’s kevlar-reinforced PowerLine cables are <a href="http://gear.lifehacker.com/your-favorite-lightning-cables-anker-powerline-and-pow-1782036601" target="_blank" rel="noopener">far and away our readers’ top choice for charging their gadgets</a>, and you can save on several models today, including some from the nylon-wrapped PowerLine+ collection. I use these cables every single day, and I’ve never had one fray or stop working. Just be sure to note the promo codes below.<br></p>'},
-        { "_id": "567", "widgetType": "HEADER", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-        { "_id": "678", "widgetType": "YOUTUBE", "pageId": "321", "width": "100%",
-            "url": "https://youtu.be/AM2Ivdi9c4E" },
-        { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
-    ];
-
     function deleteWidget(req, res) {
         var widgetId = req.params.widgetId;
-        for(var w in widgets) {
-            if(widgets[w]._id === widgetId) {
-                widgets.splice(w, 1);
-                res.sendStatus(200);
-                return;
-            }
-        }
-        res.sendStatus(404);
+
+        widgetModel
+            .deleteWidget(widgetId)
+            .then(function (response) {
+                if (response.result.n==1 && response.result.ok==1){
+                    res.sendStatus(200);
+                }
+            },function (err) {
+                res.sendStatus(404);
+            });
     }
 
     function createWidget(req, res) {
         var widget = req.body;
-        widget.pageId = req.params.pageId;
-        switch(widget.widgetType){
-            case "HEADER":
-                widget.text = "Default Text";
-                widget.size = 3;
-                break;
-            case "IMAGE":
-                widget.width = "100%";
-                widget.url = "http://lorempixel.com/400/200/sports/Dummy-Text/";
-                break;
-            case "YOUTUBE":
-                widget.width = "100%";
-                widget.url = "http://lorempixel.com/";
-                break;
-            case "HTML":
-                widget.text = "Default Text";
-                break;
-        }
-        widgets.push(widget);
-        res.json(widget);
+        var pageId = req.params.pageId;
+
+
+        widgetModel
+            .createWidget(pageId,widget)
+            .then(function (widget) {
+                res.json(widget);
+            },function (err) {
+                res.sendStatus(404);
+            });
     }
 
     function updateWidget(req, res) {
         var widgetId = req.params.widgetId;
-        var newWidget = req.body;
-        for(w in widgets){
-            widget = widgets[w];
-            if(widget._id === widgetId){
-                switch(widget.widgetType){
-                    case "HEADER":
-                        widget.text = newWidget.text;
-                        widget.size = newWidget.size;
-                        res.sendStatus(200);
-                        return;
-                    case "IMAGE":
-                        widget.width = newWidget.width;
-                        widget.url = newWidget.url;
-                        res.sendStatus(200);
-                        return;
-                    case "YOUTUBE":
-                        widget.width = newWidget.width;
-                        widget.url = newWidget.url;
-                        res.sendStatus(200);
-                        return;
-                    case "HTML":
-                        widget.text = newWidget.text;
-                        res.sendStatus(200);
-                        return;
+        var widget = req.body;
+
+        widgetModel
+            .updateWidget(widgetId, widget)
+            .then(
+                function (status) {
+                    res.sendStatus(200);
+                },
+                function (error) {
+                    res.sendStatus(400).send(error);
                 }
-            }
+            );
+    }
+
+    function deleteUploadedImage(imageUrl) {
+        // Local helper function
+        if(imageUrl && imageUrl.search('http') == -1){
+
+            fs.unlink(publicDirectory+imageUrl, function (err) {
+                if(err){
+
+                    return;
+                }
+
+            });
         }
-        res.sendStatus(404);
     }
 
     function findAllWidgetsForPage(req, res) {
         var pageId = req.params.pageId;
-        var widgetsOfId = [];
-        for(var w in widgets) {
-            if(widgets[w].pageId === pageId) {
-                widgetsOfId.push(widgets[w]);
-            }
-        }
-        res.send(widgetsOfId);
+        widgetModel
+            .findAllWidgetsForPage(pageId)
+            .then(function (widgets) {
+                res.json(widgets)
+            },function (err) {
+                res.sendStatus(404);
+            });
     }
 
     function findWidgetById(req, res) {
         var widgetId = req.params.widgetId;
-        for(var w in widgets) {
-            if(widgets[w]._id === widgetId) {
-                res.send(widgets[w]);
-                return;
-            }
-        }
-        res.sendStatus(404).send({});
+        widgetModel
+            .findWidgetById(widgetId)
+            .then(function (widget) {
+                res.json(widget)
+            },function (err) {
+                res.sendStatus(404);
+            });
+    }
+
+    function updateWidgetOrder(req, res) {
+        var pageId = req.params.pid;
+        var startIndex = parseInt(req.query.initial);
+        var endIndex = parseInt(req.query.final);
+
+        widgetModel
+            .reorderWidget(pageId, startIndex, endIndex)
+            .then(function (response) {
+
+                res.sendStatus(response);
+            }, function (err) {
+                res.sendStatus(404);
+            });
     }
 
 };

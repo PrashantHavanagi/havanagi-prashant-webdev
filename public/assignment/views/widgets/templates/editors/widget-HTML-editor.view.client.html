@@ -1,8 +1,12 @@
-<div class="form-group container-fluid">
-    <label for="html-text">Text</label>
-    <input ng-model="model.widget.text"
-           type="text"
-           placeholder="HTML Text"
-           class="form-control"
-           id="html-text"/>
+<div class="container-fluid">
+<div class="form-group">
+    <div ng-model="model.widget.text"
+         text-angular
+         ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'quote'],
+            ['bold','italics','underline','strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],
+            ['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+            ['indent','outdent'],['html', 'insertImage','insertLink', 'wordcount', 'charcount']]">
+    </div>
+</div>
+<a class="btn btn-danger btn-block" ng-click="model.deleteWidget()">Delete</a>
 </div>

@@ -27,10 +27,18 @@
                        class="form-control"
                        placeholder="lastName"/>
 
+                <label for="email">Email</label>
+                <input type="email"
+                           class="form-control"
+                           id="email"
+                           ng-model="model.user.email"
+                           placeholder="Please enter your email address"/>
+
         <label for="username" class="">Username</label>
         <input ng-model="model.user.username" id="username" type="text"
                class="form-control"
                placeholder="username"/>
+
 
         <label for="password" class="">Password</label>
         <input ng-model="model.user.password" id="password" type="password"

@@ -10,7 +10,7 @@
             </div>
             <div class="navbar-header">
                 <a class="navbar-brand">
-                    Webistes
+                    Websites
                 </a>
             </div>
             <div class="navbar-text pull-right">
@@ -46,7 +46,7 @@
         <ul class="list-group">
 
             <li ng-repeat="website in model.websites" class="list-group-item">
-                        <a href="../views/page/page-list.view.client.html">
+                        <a href="#/user/{{model.userId}}/website/{{website._id}}/page">
                         {{website.name}}
                         </a>
                         <a href="#/user/{{model.userId}}/website/{{website._id}}">

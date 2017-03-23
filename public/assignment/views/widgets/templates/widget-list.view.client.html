@@ -15,17 +15,17 @@
         </div>
     </div>
 </nav>
+<div wbdv-sortable class="container-fluid wbdev-container-side-space-fix widget-list container-fluid wbdev-widget-type-style">
 
-<div class=" widget-list container-fluid">
     <div ng-repeat="widget in model.widgets">
         <div class="jga-toolbar">
             <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
-                <span class="glyphicon glyphicon-cog"></span>
+                <span class="glyphicon glyphicon-cog "></span>
             </a>
-            <span class=" glyphicon glyphicon-align-justify"></span>
+            <span class=" glyphicon glyphicon-align-justify sorting-wid"></span>
         </div>
 
-        <div ng-switch="widget.widgetType">
+        <div ng-switch="widget.type">
             <div ng-switch-when="HEADER">
                 <ng-include src="'views/widgets/templates/widget-HEADER.view.client.html'"></ng-include>
             </div>
@@ -35,12 +35,18 @@
             <div ng-switch-when="HTML">
                 <ng-include src="'views/widgets/templates/widget-HTML.view.client.html'"></ng-include>
             </div>
-            <div ng-switch-when="YOUTUBE">
+            <div ng-switch-when="YOUTUBE" class="youtube-widget">
+
                 <ng-include src="'views/widgets/templates/widget-YOUTUBE.view.client.html'"></ng-include>
+
+            </div>
+            <div ng-switch-when="TEXT">
+                <ng-include src="'views/widgets/templates/widget-TEXT.view.client.html'"></ng-include>
             </div>
         </div>
     </div>
 </div>
+
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">

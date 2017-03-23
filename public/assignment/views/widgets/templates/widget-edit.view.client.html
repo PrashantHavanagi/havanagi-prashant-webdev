@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="navbar-text pull-right">
-            <a ng-click="model.updateWidget()">
+            <a ng-click="model.updateWidget(model.widget)">
                 <span class="glyphicon glyphicon-ok"></span>
             </a>
         </div>
@@ -18,7 +18,7 @@
     </div>
 </nav>
 
-<div ng-switch="model.widget.widgetType">
+<div ng-switch="model.widget.type">
     <div ng-switch-when = "HEADER">
         <ng-include src="'views/widgets/templates/editors/widget-HEADER-editor.view.client.html'"></ng-include>
     </div>
@@ -33,6 +33,9 @@
 
     <div ng-switch-when = "YOUTUBE">
         <ng-include src="'views/widgets/templates/editors/widget-YOUTUBE-editor.view.client.html'"></ng-include>
+    </div>
+    <div ng-switch-when = "TEXT">
+        <ng-include src="'views/widgets/templates/editors/widget-TEXT-editor.view.client.html'"></ng-include>
     </div>
 </div>
 
