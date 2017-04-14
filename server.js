@@ -13,6 +13,6 @@ require ("./test/app.js")(app);
 var assignment = require("./assignment/app.js");
 assignment(app);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 
 app.listen(port);
